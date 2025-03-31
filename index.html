@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imgs/63494_bookmark_favorite_star_icon.ico" type="image/x-icon">
+    <title>Bookmark</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&display=swap" rel="stylesheet">
+
+
+
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+
+
+<body>
+    <div id="section">
+        <div class="container">
+            <h1 class="text-capitalize text-center my-4">bookmarker</h1>
+
+            <!-- ***** Form ***** -->
+
+            <div class="form-design">
+               <div class="title-description text-center">
+                <p class="d-inline-block">
+                    <i class="fa-solid fa-bookmark"></i>
+                     Bookmark your favorite sites
+                     <i class="fa-solid fa-bookmark"></i>
+                    </p>
+               </div>
+
+                <div class="site-name">
+                    <i class="fa-solid fa-book-bookmark"></i>
+                    <label for="siteName" class="my-2 fw-bolder">Site Name</label>
+                    <input type="text" id="siteName" name="siteName" placeholder="Website Name" class="form-control">
+                </div>
+                <div class="site-url">
+                    <i class="fa-solid fa-link"></i>
+                    <label for="siteUrl" class="my-2 fw-bolder">Site URL</label>
+                    <input type="text" id="siteUrl" name="siteUrl" placeholder="Website URL" class="form-control">
+                </div>
+                <div class="site-desc">
+                    <i class="fa-solid fa-file-lines"></i>
+                    <label for="siteDesc" class="my-2 fw-bolder">Site Description</label>
+                    <textarea id="siteDesc" name="siteDesc" placeholder="Website Description" class="form-control"></textarea>
+                </div>
+
+                <div class="btn-submit text-center">
+                    <button class="btn btn-danger mt-3" id="btnSubmit" onclick="addSite()">Submit</button>
+                    <button class="btn btn-success mt-3 d-none" id="btnUpdate" onclick="updateButton()">Update Site</button>
+                </div>
+            </div>
+
+
+            <!-- ***** table ***** -->
+            <input oninput="searchSite()" type="search" name="searchSite" id="searchSite" placeholder="Search By Site Name..." class="form-control mb-3 w-50 mx-auto">
+            <table class="table text-center ">
+                <thead >
+                    <tr>
+                        <th>Index</th>
+                        <th>Website Name</th>
+                        <th>Website Description</th>
+                        <th class="text-warning">Visit</th>
+                        <th class="text-success">Update</th>
+                        <th class="text-danger">Delete</th>
+                    </tr>
+                </thead>
+                <tbody id="bodyData">
+                   
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
